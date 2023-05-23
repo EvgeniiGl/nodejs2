@@ -27,7 +27,7 @@ function getCounter(id) {
 }
 
 function incCounter(id) {
-    const url = `${process.env.COUNTER_URL}:${process.env.PORT_COUNTER}/counter/${id}/incr`;
+    const url = `${process.env.COUNTER_URL}/counter/${id}/incr`;
 
     return new Promise((resolve) => {
         const options = {

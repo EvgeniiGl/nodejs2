@@ -1,12 +1,13 @@
-FROM node:18-alpine
-WORKDIR /app
-ADD . /app
-RUN npm install
-RUN npm install -g nodemon
-# Set environment to "development" by default
-ENV NODE_ENV=development
+FROM node:16-alpine
 
-# Create app directory
-# make port available outside of the image
-CMD ["nodemon", "-L"]
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
 EXPOSE 3000
+
+CMD ["npm", "start"]

@@ -20,3 +20,23 @@ services:
       - .env
     volumes:
       - ./data:/app-data
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    env_file:
+      - .env
+    volumes:
+      - ./data/db:/data/db
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - "8081:8081"
+    env_file:
+      - .env
+    depends_on:
+      - mongo

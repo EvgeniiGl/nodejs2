@@ -19,7 +19,7 @@ function initCounter() {
 
 function saveCounter(counter) {
 	const content = JSON.stringify(counter) + "\n";
-	
+
 	return fsPromises.writeFile(file, content, { encoding: "utf8" });
 }
 

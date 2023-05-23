@@ -1,4 +1,5 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const errorMiddleware = require("./middleware/error");
 const indexRouter = require("./routes/index");
 const booksRouter = require("./routes/books");
@@ -17,7 +18,18 @@ app.use("/api/books", booksApiRouter);
 app.use(errorMiddleware);
 
 const port = process.env.PORT || 3000;
+const dbName = process.env.MONGO_URL || "mongo";
 
-app.listen(port, () => {
-	console.log(`Server started on port ${port}`);
-});
+async function start() {
+	try {
+		await mongoose.connect(dbName);
+
+		app.listen(port, () => {
+			console.log(`Server started on port ${port}`);
+		});
+	} catch (e) {
+		console.log(e);
+	}
+}
+
+start();
