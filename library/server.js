@@ -18,7 +18,7 @@ app.use("/api/books", booksApiRouter);
 app.use(errorMiddleware);
 
 const port = process.env.PORT || 3000;
-const dbName = process.env.MONGO_URL || "mongo";
+const dbName = process.env.MONGO_URL || "mongodb://mongo:27017";
 
 async function start() {
 	try {
