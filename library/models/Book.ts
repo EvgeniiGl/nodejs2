@@ -1,6 +1,21 @@
 const { model, Schema } = require("mongoose");
 
-const bookSchema = new Schema({
+interface Field {
+    type: string,
+    default: string,
+}
+
+export interface Book {
+    title: Field,
+    description: Field,
+    authors: Field,
+    favorite: Field,
+    fileCover: Field,
+    fileName: Field,
+    fileBook: Field,
+}
+
+const bookSchema: Book = new Schema({
 	title: {
 		type: String,
 		required: true,
