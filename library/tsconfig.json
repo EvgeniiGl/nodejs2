@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+//    "target": "ES5",
+//    "module": "system",
+//    "sourceMap": true,
+//    "emitDecoratorMetadata": true,
+//    "experimentalDecorators": true,
+//    "moduleResolution": "node",
+//    "removeComments": false,
+//    "noImplicitAny": true,
+//    "suppressImplicitAnyIndexErrors": true,
+//    "outDir": "public",
+    "strict": true,
+    "strictNullChecks": false
+  },
+  "exclude": [
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts"
+  ]
+}
