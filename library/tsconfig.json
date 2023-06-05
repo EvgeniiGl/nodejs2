@@ -1,15 +1,21 @@
 {
   "compilerOptions": {
-//    "target": "ES5",
-//    "module": "system",
-//    "sourceMap": true,
-//    "emitDecoratorMetadata": true,
-//    "experimentalDecorators": true,
-//    "moduleResolution": "node",
-//    "removeComments": false,
-//    "noImplicitAny": true,
-//    "suppressImplicitAnyIndexErrors": true,
-//    "outDir": "public",
+    //    "sourceMap": true,
+    //    "removeComments": false,
+    //    "noImplicitAny": true,
+    //    "suppressImplicitAnyIndexErrors": true,
+    //    "outDir": "public",
+    "target": "es5",
+    "lib": [
+      "es6"
+    ],
+    "types": [
+      "reflect-metadata"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "strict": true,
     "strictNullChecks": false
   },

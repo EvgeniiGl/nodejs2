@@ -1,10 +1,15 @@
+import { injectable } from "inversify";
+
 import {Book} from "../models/Book";
 
 const BookScheme = require("../../models/Book");
 
-abstract class BooksRepository {
+@injectable
+export class BooksRepository {
     createBook(book: Book): Book {
-        return new BookScheme(book);
+        const newBook = new BookScheme(book);
+
+        return newBook
     }
 
     async getBook(id: number): Promise<Book> {
