@@ -4,8 +4,9 @@
     //    "removeComments": false,
     //    "noImplicitAny": true,
     //    "suppressImplicitAnyIndexErrors": true,
-    //    "outDir": "public",
-    "target": "es5",
+    "rootDir": "./src/",
+    "target": "es6",
+    "outDir": "./public/",
     "lib": [
       "es6"
     ],
@@ -17,7 +18,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strict": true,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "node_modules",
